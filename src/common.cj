@@ -142,13 +142,14 @@ func makeEnum(attrTokens: Tokens, inputTokens: Tokens, flagEnum!: Bool = false, 
 
     match (attrTokens.size) {
         case 1 => name = attrTokens[0]
-        case 2 => if (attrTokens[0].kind == IDENTIFIER) {
-            name = attrTokens[0]
-            valueType = attrTokens[1]
-        } else {
-            visibility = attrTokens[0]
-            name = attrTokens[1]
-        }
+        case 2 =>
+            if (attrTokens[0].kind == IDENTIFIER) {
+                name = attrTokens[0]
+                valueType = attrTokens[1]
+            } else {
+                visibility = attrTokens[0]
+                name = attrTokens[1]
+            }
         case 3 =>
             visibility = attrTokens[0]
             name = attrTokens[1]
