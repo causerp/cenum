@@ -1,7 +1,8 @@
 package cenum.test
 
-import cenum.*
-import std.unittest.*
+import cenum.Enum
+
+// cjlint-ignore -start !G.NAM.04 function names should be lower camel case
 
 @Enum[SimpleEnum](
     Val1
@@ -66,3 +67,5 @@ func test_CustomValueEnum3_value() {
     @Expect(CustomValueEnum3.Val5.value, 8i64)
     @Expect(CustomValueEnum3.Val6.value, 9i64)
 }
+
+// cjlint-ignore -end function names should be lower camel case

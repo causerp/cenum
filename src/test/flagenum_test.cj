@@ -1,7 +1,8 @@
 package cenum.test
 
-import cenum.*
-import std.unittest.*
+import cenum.{FlagEnum, FlagEnum0, FlagEnum1}
+
+// cjlint-ignore -start !G.NAM.04 function names should be lower camel case
 
 @FlagEnum[SimpleFlagEnum](
     Val1
@@ -216,3 +217,5 @@ func test_SimpleFlagEnum3_clear() {
     @Expect(flags.isSet(SimpleFlagEnum3.Val3) == false)
     @Expect(flags.isSet(SimpleFlagEnum3.Val4) == false)
 }
+
+// cjlint-ignore -end function names should be lower camel case
